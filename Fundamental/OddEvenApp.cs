@@ -92,16 +92,17 @@ public class OddEvenApp
             return "Invalid Input!";
         }
 
-        if (input % 2 == 0)
-        {
-            return "Genap";
-        }
-        else if (input % 2 != 0)
-        {
-            return "Ganjil";
-        }
+        return input % 2 == 0 ? "Genap" : "Ganjil";
 
-        return "Invalid";
+        // if (input % 2 == 0)
+        // {
+        //     return "Genap";
+        // }
+        // else if (input % 2 != 0)
+        // {
+        //     return "Ganjil";
+        // }
+
     }
 
     public static void RunApp()
@@ -113,6 +114,7 @@ public class OddEvenApp
         {
             Menu();
             Console.Write("Pilih menu: ");
+
             int userChoice = Convert.ToInt32(Console.ReadLine());
 
             switch (userChoice)
