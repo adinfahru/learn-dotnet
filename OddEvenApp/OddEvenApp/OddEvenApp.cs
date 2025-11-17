@@ -1,7 +1,6 @@
-namespace Fundamental;
+namespace OddEvenApp;
 
 using System;
-using System.Security.Cryptography;
 
 public class OddEvenApp
 {
