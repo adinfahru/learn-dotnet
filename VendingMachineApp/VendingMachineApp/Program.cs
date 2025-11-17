@@ -234,23 +234,23 @@ class Program
             }
             catch (InsufficientFundsException ex)
             {
-                statusMessage = $"Haha miskin! {ex.Message}";
+                statusMessage = ex.Message;
             }
             catch (OutOfStockException ex)
             {
-                statusMessage = $"Buta lu? {ex.Message}";
+                statusMessage = ex.Message;
             }
             catch (KeyNotFoundException ex)
             {
-                statusMessage = $"Perintah anomali tidak dikenal {ex.Message}";
+                statusMessage = ex.Message;
             }
             catch (FormatException ex)
             {
-                statusMessage = $"Yang bener aje! {ex.Message}";
+                statusMessage = ex.Message;
             }
             catch (Exception ex)
             {
-                statusMessage = $"Gajelas {ex.Message}";
+                statusMessage = ex.Message;
             }
 
             /*

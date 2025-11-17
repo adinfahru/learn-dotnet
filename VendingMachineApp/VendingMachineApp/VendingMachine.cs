@@ -35,7 +35,7 @@ public class VendingMachine
   {
     if (amount <= 0)
     {
-      throw new ArgumentException();
+      throw new ArgumentException("");
     }
     else
     {
@@ -54,19 +54,19 @@ public class VendingMachine
   {
     if (!_inventory.ContainsKey(selectionCode))
     {
-      throw new KeyNotFoundException("");
+      throw new KeyNotFoundException("ERROR: Gaada");
     }
 
     var item = _inventory[selectionCode];
 
     if (item.Quantity <= 0)
     {
-      throw new OutOfStockException("Stok abis");
+      throw new OutOfStockException("ERROR: Stok abis");
     }
 
     if (_currentBalance < item.Price)
     {
-      throw new InsufficientFundsException("Uang lu ghoib");
+      throw new InsufficientFundsException("ERROR: Uang lu ghoib");
     }
 
     _currentBalance -= item.Price;
